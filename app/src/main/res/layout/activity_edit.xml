@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main06"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.jzd.artbeatsnature.Activity.EditActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainColor"
+        android:orientation="horizontal"
+        android:padding="@dimen/left">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/back"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/edit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TitelSize" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/maintainpeople"
+                    android:textColor="@color/mainColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="："
+                    android:textColor="@color/mainColor"
+                    android:textSize="@dimen/textSize" />
+
+                <com.liuzhen.mylibrary.Utils.NoScrollView.NoScrollGridView
+                    android:id="@+id/peoples"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="@dimen/left"
+                    android:layout_marginRight="@dimen/left"
+                    android:cacheColorHint="#00000000"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="#00000000"
+                    android:numColumns="2"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:gravity="center"
+                android:text="@string/summary"
+                android:textColor="@color/mainColor"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/left"
+                android:layout_marginRight="@dimen/left"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/summary"
+                android:gravity="top"
+                android:padding="12dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/textSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/addpicture"
+                android:textColor="@color/mainColor"
+                android:textSize="@dimen/textSize" />
+
+            <com.liuzhen.mylibrary.Utils.NoScrollView.NoScrollGridView
+                android:id="@+id/pictures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/left"
+                android:layout_marginRight="@dimen/left"
+                android:layout_marginTop="10dp"
+                android:cacheColorHint="#00000000"
+                android:horizontalSpacing="5dp"
+                android:listSelector="#00000000"
+                android:numColumns="3"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dp" />
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/button"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

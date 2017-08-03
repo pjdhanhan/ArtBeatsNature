@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main06"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.jzd.artbeatsnature.Activity.RecordActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainColor"
+        android:orientation="horizontal"
+        android:padding="@dimen/left">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/back"
+            android:gravity="center_vertical"
+            android:text="@string/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/record"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TitelSize" />
+    </RelativeLayout>
+
+    <com.liuzhen.mylibrary.Utils.XRefreshView.XRefreshView
+        android:id="@+id/xrefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+    </com.liuzhen.mylibrary.Utils.XRefreshView.XRefreshView>
+</LinearLayout>

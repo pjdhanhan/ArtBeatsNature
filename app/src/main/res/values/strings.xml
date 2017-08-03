@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">售后服务软件</string>
+    <string name="username_hint">请输入账号</string>
+    <string name="pasword_hint">请输入密码</string>
+    <string name="remenber">&#160;&#160;记住密码</string>
+    <string name="login">登录</string>
+    <string name="maintain">保养</string>
+    <string name="userinfor">个人中心</string>
+    <string name="back">&#160;&#160;&#160;&#160;</string>
+
+    <!--tain-->
+    <string name="abbreviation">客户简称</string>
+    <string name="address">客户地址</string>
+    <string name="phone">客户电话</string>
+    <string name="deliverytime">送货时间</string>
+    <string name="maintaintime">保养时间</string>
+    <string name="to">至</string>
+    <string name="search">搜索</string>
+    <!--user-->
+    <string name="name">姓名：</string>
+    <string name="account">账号：</string>
+    <string name="record">保养记录</string>
+    <string name="changepsd">修改密码</string>
+    <string name="outlogin">退出登录</string>
+    <!--修改密码-->
+
+    <string name="old_hint">请输入您的旧密码</string>
+    <string name="new_hint">请输入您的新密码</string>
+    <string name="confirm_hint">请确认您的新密码</string>
+    <string name="confirm">确定</string>
+    <string name="psd_confirm">密码不一致</string>
+
+    <!--编辑-->
+    <string name="edit">编&#160;辑</string>
+    <string name="state1">待审核</string>
+    <string name="state2">已审核</string>
+    <string name="maintainpeople">保养人员</string>
+    <string name="summary">客户情况总结:</string>
+    <string name="handsign">客户手签框:</string>
+    <string name="picture">图片:</string>
+    <string name="addpeople">添加工号</string>
+
+    <string name="addpicture">上传图片:</string>
+    <!--保养-->
+    <string name="maintain_customer">客户</string>
+    <string name="maintain_phone">电话</string>
+    <string name="maintain_address">地址</string>
+
+    <!--客户详情-->
+    <string name="customer_details">客户详情</string>
+    <string name="maintain_details">保养详情</string>
+    <string name="salesman">业务员：</string>
+
+    <string name="code">存货代码</string>
+    <string name="inventory_name">存货名称</string>
+    <string name="model">规格型号</string>
+    <string name="number">数量</string>
+    <string name="total">税后合计</string>
+
+
+    <!---->
+    <string name="maintain_time">保养时间:</string>
+    <string name="customerdeliverytime">送货时间:</string>
+    <string name="maintain_people">保养人员:</string>
+    <!--添加保养记录-->
+    <string name="add_maintain">添加保养</string>、
+    <string name="choosepeople">选择工号</string>
+    <string name="save">完成</string>
+    <string name="repaint">取消</string>
+    <string name="rback">返回</string>
+
+    <!--地图-->
+    <string name="tencent">腾讯地图</string>
+    <string name="loadtencent">前往下载腾讯地图</string>
+
+    <string name="gould">高德地图</string>
+    <string name="loadgould">前往下载高德地图</string>
+
+    <string name="baidu">百度地图</string>
+    <string name="loadbaidu">前往下载百度地图</string>
+    <string name="prompt">提示</string>
+
+    <string name="phone_null">手机号格式不正确</string>
+
+
+</resources>

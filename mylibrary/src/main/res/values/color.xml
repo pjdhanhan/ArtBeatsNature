@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#F9B72C</color>
+
+
+    <color name="secondView">#90C0FF</color>
+    <color name="black">#040A14</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="textColor">#323232</color>
+    <color name="hintColor">#C5C5C5</color>
+    <color name="baclkColor">#f7f7f7</color>
+    <color name="yellow">#F4A400</color>
+    <color name="gridBalck">#EFEFEF</color>
+    <color name="mainColor">#962223</color>
+
+    <!-- SwipeRefreshlayout-Schem颜色 -->
+    <color name="schem_color1">#ffffff</color>
+    <color name="schem_color2">#ffffff</color>
+    <color name="schem_color3">#ffffff</color>
+    <color name="schem_color4">#ffffff</color>
+
+    <color name="back_swipe_day">@color/mainColor</color>
+</resources>

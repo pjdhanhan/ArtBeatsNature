@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:id="@android:id/background">-->
+    <!--<shape>-->
+    <!--<size android:height="10dp" />-->
+    <!--<corners android:radius="5dip" />-->
+    <!--<gradient-->
+    <!--android:angle="90"-->
+    <!--android:centerColor="@color/hintColor"-->
+    <!--android:centerY="0.75"-->
+    <!--android:endColor="@color/hintColor"-->
+    <!--android:startColor="@color/hintColor" />-->
+    <!--</shape>-->
+    <!--</item>-->
+
+    <!--<item android:id="@android:id/secondaryProgress">-->
+    <!--<clip>-->
+    <!--<shape>-->
+
+    <!--<size android:height="10dp" />-->
+    <!--<gradient-->
+    <!--android:angle="270"-->
+    <!--android:centerColor="@color/mainColor"-->
+    <!--android:centerY="0.75"-->
+    <!--android:endColor="@color/mainColor"-->
+    <!--android:startColor="@color/mainColor" />-->
+    <!--</shape>-->
+    <!--</clip>-->
+    <!--</item>-->
+
+    <!--<item android:id="@android:id/progress">-->
+    <!--<clip>-->
+    <!--<shape>-->
+    <!--<size android:height="10dp" />-->
+    <!--<corners android:radius="5dip" />-->
+    <!--<gradient-->
+    <!--android:angle="90"-->
+    <!--android:centerColor="@color/mainColor"-->
+    <!--android:centerY="0.75"-->
+    <!--android:endColor="@color/mainColor"-->
+    <!--android:startColor="@color/mainColor" />-->
+    <!--</shape>-->
+    <!--</clip>-->
+    <!--</item>-->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="10dip" />
+
+            <!--  <gradient
+                 android:angle="270.0"
+                 android:centerColor="#FF4500"
+                 android:centerY="2.0"
+                 android:endColor="#FF4500"
+                 android:startColor="#CCCCCC" /> -->
+
+            <solid android:color="@color/hintColor" />
+        </shape>
+    </item>
+
+    <!--  设置进度条颜色（红色）  -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="6dp" />
+                <gradient
+                    android:endColor="@color/mainColor"
+                    android:startColor="@color/mainColor" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    android:orientation="vertical"
+    tools:context="com.jzd.artbeatsnature.Activity.MainActivity">
+
+    <com.liuzhen.mylibrary.Utils.FragmentContainer.FragmentContainer
+        android:id="@+id/fragmentcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.liuzhen.mylibrary.Utils.BottomView.MyBottomNavigation
+        android:id="@+id/bottomnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/main05" />
+</LinearLayout>
