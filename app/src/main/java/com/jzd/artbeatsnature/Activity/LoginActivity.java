@@ -105,14 +105,14 @@ public class LoginActivity extends BaseActivity {
     private void SavePWS() {
         SharedPreferences mSharedPreferences = getSharedPreferences("saveLoginInformation", 0);
         SharedPreferences.Editor mEditor = mSharedPreferences.edit();
+        mEditor.putString("userName", userName.getText().toString());
         if (remenberpsw.isChecked()) {
-            mEditor.putString("userName", userName.getText().toString());
             mEditor.putString("userPwd", pasword.getText().toString());
             mEditor.putBoolean("isChecked", true);
         } else {
-            mEditor.putString("userName", "");
-            mEditor.putString("userName", "");
-            mEditor.putBoolean("isChecked", true);
+           // mEditor.putString("userName", "");
+            mEditor.putString("userPwd", "");
+            mEditor.putBoolean("isChecked", false);
         }
         mEditor.commit();
     }
@@ -125,9 +125,12 @@ public class LoginActivity extends BaseActivity {
         String pwd = mSharedPreferences.getString("userPwd", "");
         boolean isChecked = mSharedPreferences.getBoolean("isChecked", true);
         remenberpsw.setChecked(isChecked);
+        userName.setText(lname);
         if (isChecked) {
-            userName.setText(lname);
             pasword.setText(pwd);
+        }else{
+           // userName.setText("");
+            pasword.setText("");
         }
     }
 
