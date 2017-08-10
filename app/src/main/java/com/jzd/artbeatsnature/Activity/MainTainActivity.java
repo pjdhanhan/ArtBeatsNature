@@ -47,7 +47,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MainTainActivity extends BaseActivity implements ListView.OnItemClickListener {
-
+private static String TAG="MainTainActivity";
     private XRefreshView xRefreshView;
     private ListView listview;
     private int page = 1;
@@ -98,12 +98,14 @@ public class MainTainActivity extends BaseActivity implements ListView.OnItemCli
                     List<ByBean> byBeans = new ArrayList<>();
                     for (int i = 0; i < array.length(); i++) {
                         ByBean byBean = new Gson().fromJson(array.getJSONObject(i).toString(), ByBean.class);
+                        LogUtil.logWrite(TAG,array.getJSONObject(i).toString());
                         if (byBean.getAbbreviation() != null) {
                             byBeans.add(byBean);
                         }
                     }
                     if (byBeans.size() > 0) {
                         list.addAll(byBeans);
+                        LogUtil.logWrite(TAG, "获取到的列表数据："+list.size());
                     } else {
                         if (page > 1) {
                             page--;

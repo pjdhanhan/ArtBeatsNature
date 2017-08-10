@@ -40,7 +40,7 @@ public class MainTainFragment extends BaseFragment implements View.OnClickListen
     private int year, month, day;
     private DatePicker datePicker;
     private TextView deliverytime1, deliverytime2, maintaintime1, maintaintime2, time, search, Cancle;
-    private EditText abbreviation, address, phone;
+    private EditText abbreviation, address, phone,code;
     private View view2;
 
     @Nullable
@@ -65,7 +65,7 @@ public class MainTainFragment extends BaseFragment implements View.OnClickListen
         abbreviation = (EditText) view.findViewById(R.id.abbreviation);
         address = (EditText) view.findViewById(R.id.address);
         phone = (EditText) view.findViewById(R.id.phone);
-
+        code= (EditText) view.findViewById(R.id.code);
         deliverytime1 = (TextView) view.findViewById(R.id.deliverytime1);
         deliverytime2 = (TextView) view.findViewById(R.id.deliverytime2);
         maintaintime1 = (TextView) view.findViewById(R.id.maintaintime1);
@@ -139,6 +139,7 @@ public class MainTainFragment extends BaseFragment implements View.OnClickListen
             map.put("fhsj2", deliverytime2.getText().toString());
             map.put("bysj1", maintaintime1.getText().toString());
             map.put("bysj2", maintaintime2.getText().toString());
+            map.put("chdm", code.getText().toString());
             startActivity(new Intent(getActivity(), MainTainActivity.class).putExtra("map", (Serializable) map));
         }
     }

@@ -91,7 +91,8 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter {
 				result+=sArray[i]+",";
 			}
 		}
-		if (result.substring(result.length()-1).equals(",")){
+
+		if (result.length()>1&&result.substring(result.length()-1).equals(",")){
 			Log.d(TAG, "DateDuplicateRemoval: "+result);
 			result=result.substring(0,result.length()-1);
 		}

@@ -74,6 +74,7 @@ public class BaseActivity extends TakePhotoActivity implements View.OnClickListe
     private Bitmap bitmap;
     //创建okHttpClient对象
     OkHttpClient mOkHttpClient = new OkHttpClient();
+
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     public static int flag;
   //  private Handler mhandler;

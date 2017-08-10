@@ -473,7 +473,6 @@ public class ActionSheetDialog extends BottomBaseDialog {
             iv_item.setImageResource(item.resId);
             tv_item.setText(item.operName);
             iv_item.setVisibility(item.resId == 0 ? View.GONE : View.VISIBLE);
-
             return ll_item;
         }
     }
