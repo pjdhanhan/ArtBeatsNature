@@ -2,6 +2,8 @@ package com.jzd.artbeatsnature.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -18,6 +21,7 @@ import com.jzd.artbeatsnature.Comment.Config;
 import com.jzd.artbeatsnature.Comment.Contants;
 import com.jzd.artbeatsnature.R;
 import com.liuzhen.mylibrary.Base.BaseFragment;
+import com.liuzhen.mylibrary.Utils.DialogList.Dialoglist;
 import com.liuzhen.mylibrary.Utils.LogUtils.LogUtil;
 import com.liuzhen.mylibrary.Utils.ToastUtils.ToastUtils;
 
@@ -39,7 +43,9 @@ public class MainTainFragment extends BaseFragment implements View.OnClickListen
     private View view;
     private int year, month, day;
     private DatePicker datePicker;
-    private TextView deliverytime1, deliverytime2, maintaintime1, maintaintime2, time, search, Cancle;
+    private TextView deliverytime1, deliverytime2, maintaintime1, maintaintime2, time, search, Cancle,MaintenanceCondition;
+    private LinearLayout MaintenanceCondition_l;
+
     private EditText abbreviation, address, phone,code;
     private View view2;
 
@@ -70,8 +76,11 @@ public class MainTainFragment extends BaseFragment implements View.OnClickListen
         deliverytime2 = (TextView) view.findViewById(R.id.deliverytime2);
         maintaintime1 = (TextView) view.findViewById(R.id.maintaintime1);
         maintaintime2 = (TextView) view.findViewById(R.id.maintaintime2);
+        MaintenanceCondition= (TextView) view.findViewById(R.id.MaintenanceCondition);
         search = (TextView) view.findViewById(R.id.search);
         Cancle = (TextView) view.findViewById(R.id.Cancle);
+        MaintenanceCondition_l= (LinearLayout) view.findViewById(R.id.MaintenanceCondition_l);
+        MaintenanceCondition_l.setOnClickListener(this);
         deliverytime1.setOnClickListener(this);
         deliverytime2.setOnClickListener(this);
         maintaintime1.setOnClickListener(this);
@@ -114,8 +123,26 @@ public class MainTainFragment extends BaseFragment implements View.OnClickListen
                 time = maintaintime2;
                 view2.setVisibility(View.VISIBLE);
                 break;
+            case R.id.MaintenanceCondition_l:
+                final List<String> list=new ArrayList<>();
+                list.add("全部");
+                list.add("未保养完成");
+                list.add("已保养完成");
+                Dialoglist dialoglist=new Dialoglist(list,getContext(),MaintenanceCondition_l);
+                 Handler handler=new Handler(){
+                    @Override
+                    public void handleMessage(Message msg) {
+                        super.handleMessage(msg);
+                        if (msg.arg1==Dialoglist.DATA){
+                            MaintenanceCondition.setText(list.get((Integer) msg.obj));
+                        }
+                    }
+                };
+                dialoglist.showWindow(handler);
+                break;
         }
     }
+
 
     /***
      * 参数 page=1
@@ -140,6 +167,17 @@ public class MainTainFragment extends BaseFragment implements View.OnClickListen
             map.put("bysj1", maintaintime1.getText().toString());
             map.put("bysj2", maintaintime2.getText().toString());
             map.put("chdm", code.getText().toString());
+            String bypk=MaintenanceCondition.getText().toString();
+            if (!"".equals(bypk)){
+                if ("全部".equals(bypk)){
+                    bypk="";
+                }else if (bypk.contains("未保养")){
+                    bypk="未保养";
+                }else if (bypk.contains("已保养")){
+                    bypk="已保养";
+                }
+            }
+            map.put("byqk",bypk);
             startActivity(new Intent(getActivity(), MainTainActivity.class).putExtra("map", (Serializable) map));
         }
     }

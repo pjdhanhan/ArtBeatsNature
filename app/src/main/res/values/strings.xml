@@ -56,6 +56,7 @@
     <string name="model">规格型号</string>
     <string name="number">数量</string>
     <string name="total">税后合计</string>
+    <string name="MaintenanceCondition">保养情况</string>
 
 
     <!---->
